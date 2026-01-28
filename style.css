@@ -779,3 +779,136 @@ footer {
 .scroll-top:hover {
     color: #fff;
 }
+/* Values Section – 4 cards */
+.values-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+}
+
+.values-subtitle {
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #d4af37;
+}
+
+.value-card h3 {
+    font-size: 1.8rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.value-card p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* Team Section – 3 cards */
+.team-section {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.team-subtitle {
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 340px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-circle {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #d4af37, #c19a2e);
+    color: #111;
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+}
+
+.team-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-card .role {
+    font-size: 1.2rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.team-card p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
