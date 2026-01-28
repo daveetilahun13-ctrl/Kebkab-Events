@@ -3,41 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kebkab Events - Events</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Kebkab Events - Events & Packages</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="full-bg">
     <header>
         <nav>
             <div class="logo">Kebkab Events</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="events.html">Events</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section class="events">
-            <h1>Our Events</h1>
+        <!-- Tabs for different event types -->
+        <section class="events-intro">
+            <h1>Our Events & Packages</h1>
+            <p>We specialize in Orthodox weddings, baptisms, blessings, and family celebrations — planned with prayer and precision.</p>
+        </section>
+
+        <section class="tabs-section">
             <div class="tabs">
                 <button class="tab-btn active" data-tab="weddings">Weddings</button>
-                <button class="tab-btn" data-tab="other">Other Events</button>
+                <button class="tab-btn" data-tab="baptisms">Baptisms</button>
+                <button class="tab-btn" data-tab="other">Other Celebrations</button>
             </div>
+
             <div id="weddings" class="tab-content active">
-                <p>Orthodox weddings planned with prayer. Book your day now!</p>
-                <img src="images/wedding1.jpg" alt="Orthodox wedding example">
+                <p>Orthodox weddings are sacred unions blessed by the Church. We handle every detail to make your day unforgettable.</p>
+                <img src="images/wedding1.jpg" alt="Ethiopian Orthodox wedding ceremony">
             </div>
+
+            <div id="baptisms" class="tab-content">
+                <p>Baptisms and christenings are joyful milestones. We coordinate with priests and families for a reverent celebration.</p>
+                <img src="images/baptism.jpg" alt="Orthodox baptism ceremony">
+            </div>
+
             <div id="other" class="tab-content">
-                <p>From baptisms to celebrations, we handle all Orthodox events.</p>
-                <img src="images/other.jpg" alt="General event example">
+                <p>From name days to anniversaries, we plan meaningful events that honor tradition and create lasting memories.</p>
+                <img src="images/other-event.jpg" alt="Orthodox family celebration">
+            </div>
+        </section>
+
+        <!-- Integrated Packages Section -->
+        <section class="packages-section">
+            <h2>Choose Your Package</h2>
+            <p>Select the level of service that fits your sacred occasion. All packages include coordination with priests and churches.</p>
+
+            <div class="packages">
+                <div class="package-card">
+                    <h3>Basic</h3>
+                    <div class="price">15,000 ETB</div>
+                    <p>Perfect for intimate ceremonies</p>
+                    <ul>
+                        <li>Initial consultation</li>
+                        <li>Priest & church coordination</li>
+                        <li>Basic timeline & logistics</li>
+                        <li>1 planner on-site</li>
+                    </ul>
+                    <a href="contact.html" class="btn">Choose Basic</a>
+                </div>
+
+                <div class="package-card popular">
+                    <div class="popular-tag">Most Popular</div>
+                    <h3>Standard</h3>
+                    <div class="price">35,000 ETB</div>
+                    <p>Full wedding experience</p>
+                    <ul>
+                        <li>Everything in Basic</li>
+                        <li>Custom decorations & flowers</li>
+                        <li>Rehearsal support</li>
+                        <li>Venue coordination</li>
+                        <li>2 planners + assistants</li>
+                    </ul>
+                    <a href="contact.html" class="btn">Choose Standard</a>
+                </div>
+
+                <div class="package-card">
+                    <h3>Premium</h3>
+                    <div class="price">70,000 ETB+</div>
+                    <p>Luxury & unforgettable</p>
+                    <ul>
+                        <li>Everything in Standard</li>
+                        <li>Premium decor, lighting & sound</li>
+                        <li>Dedicated event manager</li>
+                        <li>Photography guidance</li>
+                        <li>Post-event support</li>
+                    </ul>
+                    <a href="contact.html" class="btn">Choose Premium</a>
+                </div>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 Kebkab Events. All rights reserved.</p>
+        <p>© 2026 Kebkab Events – Addis Ababa, Ethiopia</p>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
