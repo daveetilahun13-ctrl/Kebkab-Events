@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Events</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebkab Events - Events</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header">
-<h1>Event Organizer</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="events.html">Events</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
-
-
-<main>
-<h2 class="center">Upcoming Events</h2>
-<section id="eventsContainer" class="events"></section>
-</main>
-
-
-<footer>
-<p>&copy; 2026 Event Organizer</p>
-</footer>
-
-
-<script src="script.js"></script>
+    <header>
+        <nav>
+            <div class="logo">Kebkab Events</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="events">
+            <h1>Our Events</h1>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="weddings">Weddings</button>
+                <button class="tab-btn" data-tab="other">Other Events</button>
+            </div>
+            <div id="weddings" class="tab-content active">
+                <p>Orthodox weddings planned with prayer. Book your day now!</p>
+                <img src="images/wedding1.jpg" alt="Orthodox wedding example">
+            </div>
+            <div id="other" class="tab-content">
+                <p>From baptisms to celebrations, we handle all Orthodox events.</p>
+                <img src="images/other.jpg" alt="General event example">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Kebkab Events. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
