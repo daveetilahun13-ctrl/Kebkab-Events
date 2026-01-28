@@ -14,7 +14,7 @@ body {
     background: #000; /* fallback */
 }
 
-/* Full background image + dark overlay on pages with .full-bg */
+/* Full background image + dark overlay */
 .full-bg {
     background-image: url('../images/hero.jpg');
     background-size: cover;
@@ -626,7 +626,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ==========================================================================
-   FOOTER – With Background Image (as requested)
+   FOOTER – Transparent with Background Image
    ========================================================================== */
 footer {
     position: relative;
@@ -643,7 +643,7 @@ footer {
 .footer-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.70); /* adjust darkness for text readability */
+    background: rgba(0, 0, 0, 0.70); /* semi-transparent overlay – adjust darkness */
     z-index: 1;
 }
 
@@ -767,7 +767,7 @@ footer {
         height: 350px;
     }
 
-    .footer-with-bg {
+    footer {
         padding: 5rem 1.5rem 2rem;
     }
 }
