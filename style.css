@@ -771,3 +771,11 @@ footer {
         text-align: center;
     }
 }
+.scroll-top {
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.scroll-top:hover {
+    color: #fff;
+}
