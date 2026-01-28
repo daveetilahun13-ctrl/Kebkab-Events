@@ -148,3 +148,47 @@ if (galleryItems.length > 0 && lightbox) {
         }
     });
 }
+// Contact Form Validation + LocalStorage
+const contactForm = document.getElementById('contact-form');
+const formMessage = document.getElementById('form-message');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        let error = '';
+
+        if (!name) error += 'Name is required.\n';
+        if (!email || !email.includes('@')) error += 'Valid email is required.\n';
+        if (!message) error += 'Message is required.\n';
+
+        if (error) {
+            formMessage.style.color = '#ff6b6b';
+            formMessage.textContent = error.trim();
+            return;
+        }
+
+        // Success – save to LocalStorage
+        const inquiry = { name, email, message, date: new Date().toLocaleString() };
+        localStorage.setItem('lastInquiry', JSON.stringify(inquiry));
+
+        formMessage.style.color = '#51cf66';
+        formMessage.textContent = 'Thank you! Your inquiry has been sent. We’ll get back to you soon.';
+
+        contactForm.reset();
+    });
+}
+
+// Optional: Show last saved inquiry on load (for demo)
+window.addEventListener('load', () => {
+    const last = localStorage.getItem('lastInquiry');
+    if (last && formMessage) {
+        const data = JSON.parse(last);
+        formMessage.style.color = '#4dabf7';
+        formMessage.textContent = `Last inquiry: ${data.name} (${data.date})`;
+    }
+});
