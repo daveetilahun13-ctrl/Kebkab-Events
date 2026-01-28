@@ -675,3 +675,99 @@ input:focus, select:focus, textarea:focus {
         height: 350px;
     }
 }
+/* ==========================================================================
+   FOOTER – Integrated & Consistent
+   ========================================================================== */
+footer {
+    background: rgba(0, 100, 0, 0.75); /* dark green with transparency */
+    backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 4rem 2rem 2rem;
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    gap: 3rem;
+}
+
+.footer-logo,
+.footer-links,
+.footer-contact {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-logo h3 {
+    font-size: 1.8rem;
+    color: #d4af37;
+    margin-bottom: 0.8rem;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    font-size: 1.3rem;
+    color: #d4af37;
+    margin-bottom: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 0.6rem 0;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: #d4af37;
+}
+
+.footer-contact p {
+    margin: 0.8rem 0;
+    font-size: 1.05rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 2rem;
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.made-with {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #d4af37;
+}
+
+/* Responsive footer – stack on mobile */
+@media (max-width: 992px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo, .footer-links, .footer-contact {
+        text-align: center;
+    }
+}
