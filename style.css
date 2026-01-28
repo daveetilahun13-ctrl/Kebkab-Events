@@ -14,9 +14,9 @@ body {
     background: #000; /* fallback */
 }
 
-/* Full background image + dark overlay on pages with .full-bg class */
+/* Full background image + dark overlay */
 .full-bg {
-    background-image: url('photo_2026-01-28_10-04-33.jpg');
+    background-image: url('../images/hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@ body {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.58); /* adjust darkness: 0.5–0.65 */
+    background: rgba(0, 0, 0, 0.58);
     z-index: -2;
 }
 
@@ -78,7 +78,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: #d4af37; /* gold */
+    color: #d4af37;
 }
 
 .btn-book {
@@ -99,12 +99,14 @@ main {
 }
 
 /* ==========================================================================
-   COMMON SECTION STYLES (hero, about, events intro, packages)
+   COMMON SECTION STYLES (hero, about, events, gallery, contact)
    ========================================================================== */
-.hero-section,
+.hero,
 .about-section,
 .events-intro,
-.packages-section {
+.packages-section,
+.gallery-hero,
+.contact-hero {
     min-height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
@@ -131,15 +133,14 @@ h1 {
     margin-bottom: 1rem;
 }
 
-h2 {
-    font-size: clamp(1.9rem, 5vw, 2.6rem);
+h2, h3, h4 {
     color: #d4af37;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     font-weight: 400;
 }
 
 /* ==========================================================================
-   ABOUT PAGE – Side-by-side text + image
+   ABOUT PAGE – Side-by-side + Values + Team
    ========================================================================== */
 .side-by-side {
     display: flex;
@@ -179,30 +180,175 @@ h2 {
     aspect-ratio: 4 / 5;
 }
 
-/* Gold button (used on About & Packages) */
-.btn-gold,
-.btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #d4af37, #c19a2e);
-    color: #111;
-    padding: 1.1rem 3rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.18rem;
-    margin-top: 2.5rem;
-    box-shadow: 0 6px 25px rgba(212,175,55,0.5);
-    transition: all 0.3s;
+/* Values Section */
+.values-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
 }
 
-.btn-gold:hover,
-.btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 35px rgba(212,175,55,0.7);
+.values-subtitle {
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #d4af37;
+}
+
+.value-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.value-card p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* Team Section */
+.team-section {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.team-subtitle {
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 340px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-circle {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #d4af37, #c19a2e);
+    color: #111;
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+}
+
+.team-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-card .role {
+    font-size: 1.2rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.team-card p {
+    font-size: 1.1rem;
+    color: #ddd;
 }
 
 /* ==========================================================================
-   TABS (Events page)
+   HOME PAGE – Stats Section
+   ========================================================================== */
+.stats-section {
+    padding: 6rem 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    flex: 1 1 200px;
+    min-width: 220px;
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+}
+
+.stat-number {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: bold;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.stat-card p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+/* ==========================================================================
+   EVENTS PAGE – Tabs + Packages
    ========================================================================== */
 .tabs {
     display: flex;
@@ -246,9 +392,6 @@ h2 {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* ==========================================================================
-   PACKAGES SECTION (integrated into Events page)
-   ========================================================================== */
 .packages {
     display: flex;
     flex-wrap: wrap;
@@ -322,119 +465,8 @@ h2 {
 }
 
 /* ==========================================================================
-   FORM (Contact page)
+   GALLERY PAGE
    ========================================================================== */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-input, textarea {
-    padding: 0.9rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    background: rgba(255,255,255,0.1);
-    color: white;
-}
-
-button[type="submit"] {
-    background: #006400;
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-footer {
-    background:#804A00;
-    padding: 2.5rem;
-    text-align: center;
-    margin-top: 5rem;
-}
-
-footer::before {
-    content: "✝";
-    display: block;
-    color: #804A00;
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    opacity: 0.7;
-}
-
-/* ==========================================================================
-   RESPONSIVE DESIGN
-   ========================================================================== */
-@media (max-width: 1100px) {
-    .side-by-side {
-        flex-direction: column;
-        gap: 4rem;
-        align-items: center;
-    }
-
-    .text-side {
-        text-align: center;
-        max-width: 700px;
-    }
-
-    .packages {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-section,
-    .about-section,
-    .events-intro,
-    .packages-section {
-        padding: 8rem 1.5rem 5rem;
-    }
-
-    h1 {
-        font-size: clamp(2.8rem, 10vw, 4.5rem);
-    }
-}
-/* Gallery Page Styles */
-.gallery-hero {
-    padding: 10rem 2rem 6rem;
-    text-align: center;
-}
-
-.gallery-hero h1 {
-    font-size: clamp(3rem, 8vw, 5rem);
-    margin-bottom: 1rem;
-}
-
-.gallery-hero p {
-    font-size: 1.4rem;
-    max-width: 700px;
-    margin: 0 auto;
-    color: #f0f0f0;
-}
-
-/* Gallery Grid – CSS Grid + Flex fallback */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -442,19 +474,6 @@ footer::before {
     padding: 0 2rem 4rem;
     max-width: 1400px;
     margin: 0 auto;
-}
-
-/* Responsive fallback for very old browsers */
-@supports not (grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))) {
-    .gallery-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .gallery-item {
-        flex: 1 1 300px;
-        max-width: 400px;
-    }
 }
 
 .gallery-item {
@@ -474,10 +493,9 @@ footer::before {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-/* Lightbox Modal */
+/* Lightbox */
 .lightbox {
     position: fixed;
     inset: 0;
@@ -496,7 +514,7 @@ footer::before {
     visibility: visible;
 }
 
-.lightbox-img {
+#lightbox-img {
     max-width: 90%;
     max-height: 90vh;
     border-radius: 12px;
@@ -518,31 +536,16 @@ footer::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s;
 }
 
 .close-btn:hover {
     background: #d4af37;
     color: #111;
 }
-/* Contact Page – Integrated Layout */
-.contact-hero {
-    padding: 10rem 2rem 6rem;
-    text-align: center;
-}
 
-.contact-hero h1 {
-    font-size: clamp(3rem, 8vw, 5rem);
-    margin-bottom: 1rem;
-}
-
-.contact-hero p {
-    font-size: 1.4rem;
-    max-width: 700px;
-    margin: 0 auto;
-    color: #f0f0f0;
-}
-
+/* ==========================================================================
+   CONTACT PAGE
+   ========================================================================== */
 .contact-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -598,12 +601,6 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 0 3px rgba(212,175,55,0.2);
 }
 
-.btn-gold {
-    align-self: flex-start;
-    padding: 1rem 2.5rem;
-    font-size: 1.2rem;
-}
-
 .form-feedback {
     padding: 1.5rem;
     border-radius: 8px;
@@ -613,39 +610,8 @@ input:focus, select:focus, textarea:focus {
     margin-top: 1rem;
 }
 
-.contact-info {
+.contact-info, .contact-map {
     text-align: center;
-    margin-bottom: 2rem;
-}
-
-.contact-info h3 {
-    font-size: 1.8rem;
-    color: #d4af37;
-    margin-bottom: 1.5rem;
-}
-
-.contact-info p {
-    font-size: 1.2rem;
-    margin: 0.8rem 0;
-}
-
-.contact-info a {
-    color: #d4af37;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-.contact-map {
-    text-align: center;
-}
-
-.contact-map h3 {
-    font-size: 1.8rem;
-    color: #d4af37;
-    margin-bottom: 1.5rem;
 }
 
 .contact-map iframe {
@@ -656,38 +622,18 @@ input:focus, select:focus, textarea:focus {
     border: none;
 }
 
-.contact-map small {
-    display: block;
-    margin-top: 1rem;
-    font-size: 0.95rem;
-    color: #aaa;
-}
-
-/* Responsive – stack on smaller screens */
-@media (max-width: 992px) {
-    .contact-content {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-map iframe {
-        height: 350px;
-    }
-}
 /* ==========================================================================
-   FOOTER – Integrated & Consistent
+   FOOTER – Elegant & Consistent
    ========================================================================== */
 footer {
-    background: #804A00; /* dark green with transparency */
+    background: rgba(0, 100, 0, 0.85);
     backdrop-filter: blur(8px);
-    color: #fff;
+    color: #f0f0f0;
     padding: 4rem 2rem 2rem;
     margin-top: 6rem;
-    text-align: center;
 }
 
-.footer-content {
+.footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -696,270 +642,108 @@ footer {
     gap: 3rem;
 }
 
-.footer-logo,
-.footer-links,
+.footer-brand,
+.footer-nav,
 .footer-contact {
     flex: 1;
     min-width: 220px;
 }
 
-.footer-logo h3 {
+.footer-brand h3 {
     font-size: 1.8rem;
     color: #d4af37;
     margin-bottom: 0.8rem;
 }
 
-.footer-logo p {
+.footer-brand p {
     font-size: 1rem;
     opacity: 0.9;
 }
 
-.footer-links h4,
+.footer-nav h4,
 .footer-contact h4 {
     font-size: 1.3rem;
     color: #d4af37;
     margin-bottom: 1.2rem;
 }
 
-.footer-links ul {
+.footer-nav ul {
     list-style: none;
     padding: 0;
 }
 
-.footer-links li {
+.footer-nav li {
     margin: 0.6rem 0;
 }
 
-.footer-links a,
+.footer-nav a,
 .footer-contact a {
     color: #f0f0f0;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.footer-links a:hover,
+.footer-nav a:hover,
 .footer-contact a:hover {
     color: #d4af37;
 }
 
 .footer-contact p {
-    margin: 0.8rem 0;
+    margin: 0.7rem 0;
     font-size: 1.05rem;
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.12);
     padding-top: 2rem;
     font-size: 0.95rem;
     opacity: 0.85;
 }
 
-.made-with {
-    margin-top: 0.5rem;
-    font-style: italic;
+.heart {
+    margin-top: 0.6rem;
     color: #d4af37;
-}
-
-/* Responsive footer – stack on mobile */
-@media (max-width: 992px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-logo, .footer-links, .footer-contact {
-        text-align: center;
-    }
-}
-.scroll-top {
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-.scroll-top:hover {
-    color: #fff;
-}
-/* Values Section – 4 cards */
-.values-section {
-    padding: 6rem 2rem;
-    text-align: center;
-    background: rgba(0,0,0,0.4);
-}
-
-.values-subtitle {
-    font-size: 1.3rem;
-    color: #f0f0f0;
-    margin-bottom: 4rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.value-card {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 16px;
-    padding: 2.5rem;
-    transition: transform 0.3s;
-}
-
-.value-card:hover {
-    transform: translateY(-10px);
-}
-
-.value-icon {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    color: #d4af37;
-}
-
-.value-card h3 {
-    font-size: 1.8rem;
-    color: #d4af37;
-    margin-bottom: 1rem;
-}
-
-.value-card p {
-    font-size: 1.1rem;
-    color: #ddd;
-}
-
-/* Team Section – 3 cards */
-.team-section {
-    padding: 6rem 2rem;
-    text-align: center;
-}
-
-.team-subtitle {
-    font-size: 1.3rem;
-    color: #f0f0f0;
-    margin-bottom: 4rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.team-card {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 16px;
-    padding: 2.5rem;
-    width: 340px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.team-card:hover {
-    transform: translateY(-10px);
-}
-
-.team-circle {
-    width: 120px;
-    height: 120px;
-    background: linear-gradient(135deg, #d4af37, #c19a2e);
-    color: #111;
-    font-size: 3.5rem;
-    font-weight: bold;
-    line-height: 120px;
-    border-radius: 50%;
-    margin: 0 auto 1.5rem;
-}
-
-.team-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
-
-.team-card .role {
-    font-size: 1.2rem;
-    color: #d4af37;
-    margin-bottom: 1rem;
     font-style: italic;
 }
 
-.team-card p {
-    font-size: 1.1rem;
-    color: #ddd;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .team-grid {
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 1100px) {
+    .side-by-side, .stats-grid, .values-grid, .team-grid, .packages, .gallery-grid, .contact-content, .footer-container {
         flex-direction: column;
         align-items: center;
+        gap: 4rem;
+    }
+
+    .text-side {
+        text-align: center;
+        max-width: 700px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
-/* Stats / Values Section on Home Page */
-.stats-section {
-    padding: 6rem 2rem;
-    background: rgba(0, 0, 0, 0.4);
-    text-align: center;
-}
 
-.stats-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+@media (max-width: 768px) {
+    .hero-section, .about-section, .events-intro, .packages-section, .gallery-hero, .contact-hero, .stats-section, .values-section, .team-section {
+        padding: 8rem 1.5rem 5rem;
+    }
 
-.stat-card {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 12px;
-    padding: 2.5rem 1.5rem;
-    flex: 1 1 200px;
-    min-width: 220px;
-    max-width: 300px;
-    transition: transform 0.3s;
-}
+    h1 {
+        font-size: clamp(2.8rem, 10vw, 4.5rem);
+    }
 
-.stat-card:hover {
-    transform: translateY(-8px);
-}
-
-.stat-number {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: bold;
-    color: #d4af37;
-    margin-bottom: 1rem;
-}
-
-.stat-card p {
-    font-size: 1.2rem;
-    color: #f0f0f0;
-}
-
-/* Responsive – stack on very small screens */
-@media (max-width: 600px) {
-    .stats-grid {
-        flex-direction: column;
-        align-items: center;
+    .contact-map iframe {
+        height: 350px;
     }
 }
