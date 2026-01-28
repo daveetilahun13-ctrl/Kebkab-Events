@@ -1,328 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebkab Events - About Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="full-bg">
+    <header>
+        <nav>
+            <div class="logo">Kebkab Events</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <main>
+        <section class="about-section">
+            <div class="section-label">
+                <span class="plus">+</span> ABOUT US <span class="plus">+</span>
+            </div>
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.7;
-    color: #fff;
-    background: #000; /* fallback */
-}
+            <h1>Honoring Traditions,<br>Creating Memories</h1>
 
-/* Full background image + overlay */
-.full-bg {
-    background-image: url('photo_2026-01-28_10-04-33.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-}
+            <h2>For Years, Kebkab Events has been the trusted partner</h2>
 
-.full-bg::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.58); /* adjust darkness 0.5–0.65 */
-    z-index: -2;
-}
+            <div class="side-by-side">
+                <div class="text-side">
+                    <p>Kebkab Events is dedicated to planning Orthodox weddings and celebrations in Addis Ababa, Ethiopia. We honor the sacred traditions of the Ethiopian Orthodox Church, creating lifetime memories filled with prayer, elegance, and authenticity.</p>
 
-/* ==========================================================================
-   HEADER – Transparent & Fixed
-   ========================================================================== */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 1.4rem 0;
-    background: transparent;
-}
+                    <p>Our team deeply understands the spiritual significance of these ceremonies. We work closely with priests, churches, and families to ensure every event reflects the beauty and reverence of our ancient traditions.</p>
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
+                    <p>From intimate baptisms to grand wedding celebrations, we handle every detail with care, allowing you to focus on what matters most — the sacred moment itself.</p>
 
-.logo {
-    font-size: 1.9rem;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-}
+                    <a href="contact.html" class="btn-gold">Learn More About Us →</a>
+                </div>
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2.5rem;
-}
+                <div class="image-side">
+                    <img src="89d2ce386d522fe072ac0f3f83438828.jpg" alt="Ethiopian Orthodox wedding couple in traditional attire with crowns and gold jewelry">
+                </div>
+            </div>
+        </section>
+    </main>
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 0.8rem;
-    transition: 0.3s;
-    text-shadow: 0 1px 6px #000;
-}
+    <footer>
+        <p>© 2026 Kebkab Events – Addis Ababa, Ethiopia</p>
+    </footer>
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: #d4af37; /* gold */
-}
-
-.btn-book {
-    background: #d4af37;
-    color: #111;
-    padding: 0.7rem 1.6rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(212,175,55,0.4);
-}
-
-/* ==========================================================================
-   MAIN CONTENT (space for fixed header)
-   ========================================================================== */
-main {
-    padding-top: 120px;
-}
-
-/* ==========================================================================
-   ABOUT / HERO SECTION – Side-by-side text + image
-   ========================================================================== */
-.about-section, .hero-section {
-    min-height: calc(100vh - 120px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10rem 3rem 6rem;
-    text-align: center;
-}
-
-.section-label {
-    font-size: 1.3rem;
-    color: #d4af37;
-    letter-spacing: 10px;
-    margin-bottom: 2.5rem;
-    font-weight: 400;
-}
-
-.plus { margin: 0 1.2rem; }
-
-h1 {
-    font-size: clamp(3.5rem, 9vw, 6.5rem);
-    font-weight: 900;
-    line-height: 1.05;
-    margin-bottom: 1rem;
-}
-
-h2 {
-    font-size: clamp(1.9rem, 5vw, 2.6rem);
-    color: #d4af37;
-    margin-bottom: 3rem;
-    font-weight: 400;
-}
-
-.side-by-side {
-    display: flex;
-    align-items: flex-start;
-    gap: 6rem;
-    max-width: 1300px;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.text-side {
-    flex: 1 1 45%;
-    min-width: 420px;
-    text-align: left;
-}
-
-.text-side p {
-    font-size: 1.22rem;
-    line-height: 1.9;
-    margin-bottom: 2.2rem;
-    color: #f0f0f0;
-    max-width: 640px;
-}
-
-.image-side {
-    flex: 1 1 45%;
-    min-width: 420px;
-}
-
-.image-side img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.65);
-    aspect-ratio: 4 / 5;
-}
-
-/* Gold button */
-.btn-gold {
-    display: inline-block;
-    background: linear-gradient(135deg, #d4af37, #c19a2e);
-    color: #111;
-    padding: 1.1rem 3rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.18rem;
-    margin-top: 2.5rem;
-    box-shadow: 0 6px 25px rgba(212,175,55,0.5);
-    transition: all 0.3s;
-}
-.btn-gold:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 35px rgba(212,175,55,0.7);
-}
-
-/* ==========================================================================
-   CARDS & OTHER SECTIONS
-   ========================================================================== */
-.card {
-    background: rgba(255,255,255,0.92);
-    color: #333;
-    margin: 3rem auto;
-    padding: 2.5rem;
-    max-width: 1100px;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-}
-
-/* ==========================================================================
-   TABS (Events page)
-   ========================================================================== */
-.tabs {
-    display: flex;
-    gap: 0.6rem;
-    margin: 2.5rem 0;
-    flex-wrap: wrap;
-}
-
-.tab-btn {
-    padding: 0.9rem 1.8rem;
-    background: #eee;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px 6px 0 0;
-    font-weight: 500;
-}
-
-.tab-btn.active {
-    background: #006400;
-    color: white;
-}
-
-.tab-content {
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-.tab-content img {
-    width: 100%;
-    max-height: 420px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* ==========================================================================
-   FORM (Contact page)
-   ========================================================================== */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-input, textarea {
-    padding: 0.9rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-button[type="submit"] {
-    background: #006400;
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-footer {
-    background: #804A00;
-    padding: 2.5rem;
-    text-align: center;
-    margin-top: 5rem;
-}
-
-footer::before {
-    content: "✝️";
-    display: block;
-    color: #804A00;
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    opacity: 0.7;
-}
-
-/* ==========================================================================
-   RESPONSIVE DESIGN
-   ========================================================================== */
-@media (max-width: 1100px) {
-    .side-by-side {
-        flex-direction: column;
-        gap: 4rem;
-        align-items: center;
-    }
-
-    .text-side {
-        text-align: center;
-        max-width: 700px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-section, .hero-section {
-        padding: 8rem 1.5rem 5rem;
-    }
-
-    h1 {
-        font-size: clamp(2.8rem, 10vw, 4.5rem);
-    }
-}
+    <script src="js/script.js"></script>
+</body>
+</html>
