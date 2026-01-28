@@ -192,3 +192,21 @@ window.addEventListener('load', () => {
         formMessage.textContent = `Last inquiry: ${data.name} (${data.date})`;
     }
 });
+// Scroll-to-top button in footer (optional)
+const footer = document.querySelector('footer');
+if (footer) {
+    const scrollTopLink = document.createElement('a');
+    scrollTopLink.href = '#';
+    scrollTopLink.textContent = '↑ Back to Top';
+    scrollTopLink.className = 'scroll-top';
+    scrollTopLink.style.display = 'block';
+    scrollTopLink.style.marginTop = '1.5rem';
+    scrollTopLink.style.color = '#d4af37';
+    scrollTopLink.style.textDecoration = 'none';
+    footer.appendChild(scrollTopLink);
+
+    scrollTopLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
