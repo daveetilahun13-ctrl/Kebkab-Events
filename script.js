@@ -115,4 +115,36 @@ packageCards.forEach(card => {
     });
 });
 
-// End of script - clean and modular
+// Gallery Lightbox
+const galleryItems = document.querySelectorAll('.gallery-item');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close-btn');
+
+if (galleryItems.length > 0 && lightbox) {
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const fullSrc = item.querySelector('img').getAttribute('data-full');
+            lightboxImg.src = fullSrc;
+            lightbox.classList.remove('hidden');
+            lightbox.focus(); // accessibility
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.classList.add('hidden');
+    });
+
+    // Close on outside click or Escape key
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.add('hidden');
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+            lightbox.classList.add('hidden');
+        }
+    });
+}
