@@ -679,7 +679,7 @@ input:focus, select:focus, textarea:focus {
    FOOTER – Integrated & Consistent
    ========================================================================== */
 footer {
-    background: rgba(0, 100, 0, 0.75); /* dark green with transparency */
+    background: #804A00; /* dark green with transparency */
     backdrop-filter: blur(8px);
     color: #fff;
     padding: 4rem 2rem 2rem;
