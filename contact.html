@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebkab Events - Contact</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header">
-<h1>Event Organizer</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="events.html">Events</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
-
-
-<main>
-<h2 class="center">Contact Us</h2>
-<form id="contactForm" class="form">
-<label>Name</label>
-<input type="text" id="name" required>
-
-
-<label>Email</label>
-<input type="email" id="email" required>
-
-
-<label>Message</label>
-<textarea id="message" required></textarea>
-
-
-<button type="submit">Send Message</button>
-</form>
-</main>
-
-
-<footer>
-<p>&copy; 2026 Event Organizer</p>
-</footer>
-
-
-<script src="js/script.js"></script>
+    <header>
+        <nav>
+            <div class="logo">Kebkab Events</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <div id="form-message"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Kebkab Events. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
