@@ -14,9 +14,9 @@ body {
     background: #000; /* fallback */
 }
 
-/* Full background image + dark overlay */
+/* Full background image + dark overlay on pages with .full-bg */
 .full-bg {
-    background-image: url('photo_2026-01-28_10-04-33.jpg');
+    background-image: url('../images/hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -99,14 +99,17 @@ main {
 }
 
 /* ==========================================================================
-   COMMON SECTION STYLES (hero, about, events, gallery, contact)
+   COMMON SECTION STYLES
    ========================================================================== */
 .hero,
 .about-section,
 .events-intro,
 .packages-section,
 .gallery-hero,
-.contact-hero {
+.contact-hero,
+.stats-section,
+.values-section,
+.team-section {
     min-height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
@@ -623,14 +626,31 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ==========================================================================
-   FOOTER – Elegant & Consistent
+   FOOTER – With Background Image (as requested)
    ========================================================================== */
 footer {
-    background: rgba(0, 100, 0, 0.85);
-    backdrop-filter: blur(8px);
-    color: #f0f0f0;
-    padding: 4rem 2rem 2rem;
+    position: relative;
+    background-image: url('../images/footer-bg.jpg'); /* ← your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 6rem 2rem 3rem;
     margin-top: 6rem;
+    overflow: hidden;
+}
+
+.footer-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.70); /* adjust darkness for text readability */
+    z-index: 1;
+}
+
+.footer-container,
+.footer-bottom {
+    position: relative;
+    z-index: 2;
 }
 
 .footer-container {
@@ -638,7 +658,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 4rem;
     gap: 3rem;
 }
 
@@ -698,7 +718,7 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.12);
     padding-top: 2rem;
     font-size: 0.95rem;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 .heart {
@@ -745,5 +765,9 @@ footer {
 
     .contact-map iframe {
         height: 350px;
+    }
+
+    .footer-with-bg {
+        padding: 5rem 1.5rem 2rem;
     }
 }
