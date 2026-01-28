@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebkab Events - Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="full-bg">
+    <header>
+        <nav>
+            <div class="logo">Kebkab Events</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section class="gallery-hero">
+            <h1>Gallery</h1>
+            <p>Capturing sacred moments of Orthodox weddings, baptisms, and celebrations — planned with reverence and beauty.</p>
+        </section>
+
+        <section class="gallery-grid">
+            <!-- Gallery images – add your own paths -->
+            <div class="gallery-item">
+                <img src="images/gallery-1.jpg" alt="Orthodox wedding couple under church crowns" data-full="images/gallery-1.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-2.jpg" alt="Priest blessing the couple during ceremony" data-full="images/gallery-2.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-3.jpg" alt="Traditional Ethiopian Orthodox decorations" data-full="images/gallery-3.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-4.jpg" alt="Family celebration with candles and incense" data-full="images/gallery-4.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-5.jpg" alt="Baptism ceremony in church" data-full="images/gallery-5.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-6.jpg" alt="Bride and groom in gold embroidered attire" data-full="images/gallery-6.jpg">
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox hidden" role="dialog" aria-label="Image preview">
+        <button class="close-btn" aria-label="Close preview">×</button>
+        <img id="lightbox-img" src="" alt="Enlarged gallery image">
+    </div>
+
+    <footer>
+        <p>© 2026 Kebkab Events – Addis Ababa, Ethiopia</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
