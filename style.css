@@ -944,3 +944,38 @@ a:active {
     padding-top: 10px;  /* Adjust this to control the space at the very top */
     padding-bottom: 10px;
 }
+/* This removes the big empty space at the top */
+.footer-with-bg {
+    padding: 20px 0; /* Reduced padding to tighten the space */
+    position: relative;
+    text-align: center;
+}
+
+.footer-bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    justify-content: center;
+}
+
+/* Fixes the "space" by removing paragraph margins */
+.footer-bottom p {
+    margin: 0; 
+    padding: 5px 0;
+}
+
+.contact-row, .copyright-row {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Ensures the second line is centered */
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.separator {
+    margin: 0 5px;
+    opacity: 0.6;
+}
