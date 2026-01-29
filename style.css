@@ -1015,3 +1015,13 @@ a:active {
         margin: 0.8rem 0;
     }
 }
+    @media (max-width: 992px) {
+    .menu-toggle {
+        margin-left: auto;          /* pushes it to the right */
+        margin-right: 1rem;         /* small gap from the right edge */
+    }
+
+    nav {
+        justify-content: space-between;  /* ensure logo left, hamburger right */
+    }
+}
