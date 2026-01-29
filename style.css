@@ -729,3 +729,36 @@ footer {
         padding: 3.5rem 1.2rem 1.5rem;
     }
 }
+/* Center the side-by-side section horizontally + give breathing room */
+.about-section {
+    padding: 4rem 2rem 3rem; /* keep compact */
+}
+
+.side-by-side {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1100px;          /* ← this prevents it from going full-width */
+    width: 100%;
+    margin: 0 auto;             /* ← centers it horizontally */
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+    .side-by-side {
+        max-width: 1000px;      /* even narrower on very large screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .side-by-side {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-side img {
+        max-width: 90%;
+    }
+}
