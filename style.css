@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -978,25 +979,4 @@ a:active {
 .separator {
     margin: 0 5px;
     opacity: 0.6;
-}
-.footer-with-bg {
-    position: relative; /* This is the anchor */
-    padding: 20px 0;    /* Adjust this to control overall thickness */
-    overflow: hidden;
-}
-
-.footer-overlay {
-    position: absolute; /* This pulls it out of the normal layout flow */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* The "darkness" layer */
-    z-index: 1;         /* Stays behind the text */
-}
-
-.footer-bottom {
-    position: relative; /* Brings the text forward */
-    z-index: 2;         /* Sits on top of the overlay */
-    margin: 0;          /* Removes extra gaps */
 }
