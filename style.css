@@ -1,6 +1,4 @@
-/* ==========================================================================
-   RESET & GLOBAL STYLES
-   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +12,6 @@ body {
     background: #000;
 }
 
-/* Full background image + dark overlay */
 .full-bg {
     background-image: url('photo_2026-01-28_10-04-33.jpg');
     background-size: cover;
@@ -32,9 +29,6 @@ body {
     z-index: -2;
 }
 
-/* ==========================================================================
-   HEADER – Compact & Fixed
-   ========================================================================== */
 header {
     position: fixed;
     top: 0;
@@ -91,16 +85,11 @@ nav ul li a.active {
     box-shadow: 0 3px 12px rgba(212,175,55,0.4);
 }
 
-/* ==========================================================================
-   MAIN CONTENT (reduced space for fixed header)
-   ========================================================================== */
 main {
     padding-top: 60px; /* was 120px – much tighter */
 }
 
-/* ==========================================================================
-   COMMON SECTION STYLES – Much tighter spacing
-   ========================================================================== */
+
 .hero,
 .about-section,
 .events-intro,
@@ -110,8 +99,8 @@ main {
 .stats-section,
 .values-section,
 .team-section {
-    padding: 4rem 1.5rem 3rem;      /* significantly reduced */
-    min-height: auto;                /* no forced height – content-driven */
+    padding: 4rem 1.5rem 3rem;     
+    min-height: auto;                
     text-align: center;
 }
 
@@ -138,9 +127,6 @@ h2, h3, h4 {
     font-weight: 400;
 }
 
-/* ==========================================================================
-   ABOUT PAGE – Side-by-side + Values + Team (tighter)
-   ========================================================================== */
 .side-by-side {
     display: flex;
     align-items: flex-start;
@@ -297,9 +283,6 @@ h2, h3, h4 {
     color: #ddd;
 }
 
-/* ==========================================================================
-   HOME PAGE – Stats Section (tighter)
-   ========================================================================== */
 .stats-section {
     padding: 4rem 1.5rem 3rem;
     background: rgba(0, 0, 0, 0.4);
@@ -343,9 +326,6 @@ h2, h3, h4 {
     color: #f0f0f0;
 }
 
-/* ==========================================================================
-   EVENTS PAGE – Tabs + Packages (tighter)
-   ========================================================================== */
 .tabs {
     display: flex;
     justify-content: center;
@@ -460,9 +440,6 @@ h2, h3, h4 {
     color: #d4af37;
 }
 
-/* ==========================================================================
-   GALLERY PAGE
-   ========================================================================== */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -538,10 +515,6 @@ h2, h3, h4 {
     background: #d4af37;
     color: #111;
 }
-
-/* ==========================================================================
-   CONTACT PAGE
-   ========================================================================== */
 .contact-content {
     max-width: 1100px;
     margin: 0 auto;
@@ -617,10 +590,6 @@ input:focus, select:focus, textarea:focus {
     height: 400px;
     border: none;
 }
-
-/* ==========================================================================
-   FOOTER – With Background Image
-   ========================================================================== */
 footer {
     position: relative;
     background-image: url('../images/footer-bg.jpg');
@@ -720,9 +689,6 @@ footer {
     font-style: italic;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN
-   ========================================================================== */
 @media (max-width: 1100px) {
     .side-by-side, .stats-grid, .values-grid, .team-grid, .packages, .gallery-grid, .contact-content, .footer-container {
         flex-direction: column;
