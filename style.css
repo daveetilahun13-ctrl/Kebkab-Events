@@ -1111,3 +1111,79 @@ a:active {
     object-fit: contain;    /* ← this line prevents stretching */
     background: #000;       /* black bars blend with container */
 }
+    .hero {
+    position: relative;
+    min-height: 80vh;               /* adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+}
+
+.hero::before {                     /* optional dark overlay if not already present */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);  /* adjust darkness */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;               /* controls how wide the text block is */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 8vw, 5.5rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    color: #f0f0f0;
+}
+
+.btn-book {
+    display: inline-block;
+    background: #d4af37;
+    color: #111;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    box-shadow: 0 6px 20px rgba(212,175,55,0.4);
+}
+
+.btn-book:hover {
+    background: #ffd700;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(212,175,55,0.5);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 70vh;
+        padding: 5rem 1.2rem 4rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 9vw, 4.2rem);
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
