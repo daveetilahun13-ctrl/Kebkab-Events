@@ -207,7 +207,7 @@ h2, h3, h4 {
     aspect-ratio: 4 / 5;
 }
 
-/* Values Section */
+/* Values Section – tighter */
 .values-section {
     padding: 4rem 1.5rem 3rem;
 }
@@ -258,7 +258,7 @@ h2, h3, h4 {
     color: #ddd;
 }
 
-/* Team Section */
+/* Team Section – tighter */
 .team-section {
     padding: 4rem 1.5rem 3rem;
 }
@@ -896,7 +896,7 @@ a:active {
     color: #d4af37;
 }
 
-/* Buttons inside */
+/* Gold button links (already golden, but reinforce) */
 .btn-gold, .btn {
     color: #111 !important;
 }
