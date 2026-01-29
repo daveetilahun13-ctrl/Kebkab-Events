@@ -1095,3 +1095,19 @@ a:active {
         transform: rotate(-45deg) translate(7px, -6px);
     }
 }
+    .gallery-item.video-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    cursor: pointer;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.gallery-item.video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;    /* ← this line prevents stretching */
+    background: #000;       /* black bars blend with container */
+}
