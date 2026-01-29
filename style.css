@@ -762,3 +762,140 @@ footer {
         max-width: 90%;
     }
 }
+.menu-toggle {
+    display: none; /* hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    transition: all 0.3s;
+}
+
+/* Mobile: hide nav links, show hamburger */
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 280px;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        transition: right 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
+
+footer {
+    position: relative;
+    background-image: url('../images/footer-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 4rem 1.5rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.70);
+    z-index: 1;
+}
+
+.footer-container,
+.footer-bottom {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    gap: 2.5rem;
+}
+
+@media (max-width: 992px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-brand, .footer-nav, .footer-contact {
+        text-align: center;
+    }
+
+    .footer-nav ul {
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 60px; /* tighter for mobile nav */
+    }
+
+    .hero, .about-section, .events-intro, .packages-section, .gallery-hero, .contact-hero, .stats-section, .values-section, .team-section {
+        padding: 5rem 1.2rem 3rem;
+    }
+
+    h1 {
+        font-size: clamp(2.4rem, 9vw, 4rem);
+    }
+
+    .section-label {
+        font-size: 1rem;
+        letter-spacing: 4px;
+    }
+
+    .btn-gold, .btn-book {
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+    }
+
+    .contact-map iframe {
+        height: 320px;
+    }
+}
