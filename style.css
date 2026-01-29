@@ -975,3 +975,28 @@ a:active {
     margin: 0 5px;
     opacity: 0.6;
 }
+/* Package PDF download buttons */
+.package-downloads {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 0 1.5rem 4rem;
+}
+
+.pdf-btn {
+    display: inline-block;
+    background: #d4af37;
+    color: #111;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(212,175,55,0.3);
+}
+
+.pdf-btn:hover {
+    background: #ffd700;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212,175,55,0.5);
+}
