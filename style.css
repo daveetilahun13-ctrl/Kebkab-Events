@@ -181,12 +181,11 @@ h2, h3, h4 {
 
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.2rem;
-    max-width: 1100px;
+    grid-template-columns: repeat(3, 1fr);   /* 3 columns on desktop */
+    gap: 2rem;
+    max-width: 1000px;
     margin: 0 auto;
 }
-
 .value-card {
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
