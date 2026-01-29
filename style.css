@@ -934,3 +934,139 @@ a:active {
 /* Gold button links (already golden, but reinforce) */
 .btn-gold, .btn {
     color: #D4AF37 !important;        /* dark text inside gold button */
+    /* ==========================================================================
+   FOOTER – Compact, nice & mobile-friendly (2026 version)
+   ========================================================================== */
+footer {
+    position: relative;
+    background-image: url('../images/footer-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f0f0f0;
+    padding: 3rem 1.5rem 1.5rem;        /* much smaller than before */
+    margin-top: 3rem;                    /* reduced top spacing */
+    font-size: 0.95rem;
+}
+
+.footer-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    z-index: 1;
+}
+
+.footer-container,
+.footer-bottom {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    gap: 2rem;
+}
+
+.footer-brand,
+.footer-nav,
+.footer-contact {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.footer-nav h4,
+.footer-contact h4 {
+    font-size: 1.1rem;
+    color: #d4af37;
+    margin-bottom: 0.8rem;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li {
+    margin: 0.4rem 0;
+}
+
+.footer-nav a,
+.footer-contact a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover,
+.footer-contact a:hover {
+    color: #d4af37;
+}
+
+.footer-contact p {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 1.2rem;
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+.heart {
+    margin-top: 0.4rem;
+    color: #d4af37;
+    font-style: italic;
+}
+
+/* Mobile: even more compact stacking */
+@media (max-width: 992px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.8rem;
+    }
+
+    .footer-brand, .footer-nav, .footer-contact {
+        text-align: center;
+    }
+
+    footer {
+        padding: 2.5rem 1.2rem 1.2rem;
+        margin-top: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 2rem 1rem 1rem;
+    }
+
+    .footer-brand h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer-nav h4,
+    .footer-contact h4 {
+        font-size: 1rem;
+    }
+}
