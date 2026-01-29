@@ -181,7 +181,7 @@ h2, h3, h4 {
 
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);   /* 3 columns on desktop */
+    grid-template-columns: repeat(4, 1fr);   /* 3 columns on desktop */
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
