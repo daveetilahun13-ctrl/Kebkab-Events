@@ -901,38 +901,38 @@ footer {
 }
 /* Make ALL links golden – normal, visited, hover, active */
 a {
-    color: #FFFF00;                /* golden for normal links */
+    color: #D4AF37;                /* golden for normal links */
     text-decoration: none;         /* remove underline if you want clean look */
     transition: color 0.3s ease;
 }
 
 a:visited {
-    color: #FFFF00;                /* visited links also golden (no purple) */
+    color: #D4AF37;                /* visited links also golden (no purple) */
 }
 
 a:hover {
-    color: #ffd700;                /* brighter gold on hover for feedback */
+    color: #D4AF37;                /* brighter gold on hover for feedback */
     text-decoration: underline;    /* optional: underline on hover for clarity */
 }
 
 a:active {
-    color: #FFFF00;                /* slightly darker when clicked */
+    color: #D4AF37;                /* slightly darker when clicked */
 }
 
 /* Optional: if you want links in specific areas to behave differently */
 .nav-links a,
 .footer-nav a,
 .footer-contact a {
-    color: #FFFF00;                /* keep nav/footer links white/light */
+    color: #D4AF37;                /* keep nav/footer links white/light */
 }
 
 .nav-links a:hover,
 .footer-nav a:hover,
 .footer-contact a:hover {
-    color: #FFFF00;                /* turn golden on hover */
+    color: #D4AF37;                /* turn golden on hover */
 }
 
 /* Gold button links (already golden, but reinforce) */
 .btn-gold, .btn {
-    color: #FFFF00 !important;        /* dark text inside gold button */
+    color: #D4AF37 !important;        /* dark text inside gold button */
 }
