@@ -164,7 +164,7 @@ h2, h3, h4 {
     aspect-ratio: 4 / 5;
 }
 
-/* Values Section – tighter */
+
 .values-section {
     padding: 4rem 1.5rem 3rem;
 }
@@ -214,7 +214,7 @@ h2, h3, h4 {
     color: #ddd;
 }
 
-/* Team Section – tighter */
+
 .team-section {
     padding: 4rem 1.5rem 3rem;
 }
@@ -783,7 +783,7 @@ footer {
     transition: all 0.3s;
 }
 
-/* Mobile: hide nav links, show hamburger */
+
 @media (max-width: 992px) {
     .menu-toggle {
         display: block;
@@ -872,7 +872,7 @@ footer {
 
 @media (max-width: 768px) {
     main {
-        padding-top: 60px; /* tighter for mobile nav */
+        padding-top: 60px;
     }
 
     .hero, .about-section, .events-intro, .packages-section, .gallery-hero, .contact-hero, .stats-section, .values-section, .team-section {
@@ -975,7 +975,7 @@ a:active {
     margin: 0 5px;
     opacity: 0.6;
 }
-/* PDF Download Buttons – beneath packages */
+
 .package-downloads {
     text-align: center;
     margin: 3rem 0 4rem;
@@ -1007,7 +1007,7 @@ a:active {
     box-shadow: 0 8px 20px rgba(212,175,55,0.5);
 }
 
-/* Mobile – stack buttons vertically if needed */
+
 @media (max-width: 768px) {
     .pdf-btn {
         width: 100%;
@@ -1017,15 +1017,15 @@ a:active {
 }
     @media (max-width: 992px) {
     .menu-toggle {
-        margin-left: auto;          /* pushes it to the right */
-        margin-right: 1rem;         /* small gap from the right edge */
+        margin-left: auto;         
+        margin-right: 1rem;         
     }
 
     nav {
-        justify-content: space-between;  /* ensure logo left, hamburger right */
+        justify-content: space-between;  
     }
 }
-    /* Mobile nav – force hamburger to right edge */
+    
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -1058,11 +1058,11 @@ a:active {
     gap: 2rem;
 }
 
-/* Mobile: show hamburger on right, hide links */
+
 @media (max-width: 992px) {
     .menu-toggle {
         display: block;
-        margin-left: auto;     /* pushes it to the right */
+        margin-left: auto;    
     }
 
     .nav-links {
@@ -1084,7 +1084,7 @@ a:active {
         right: 0;
     }
 
-    /* Hamburger to X animation */
+    
     .menu-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(8px, 8px);
     }
@@ -1108,12 +1108,12 @@ a:active {
 .gallery-item.video-item video {
     width: 100%;
     height: 100%;
-    object-fit: contain;    /* ← this line prevents stretching */
-    background: #000;       /* black bars blend with container */
+    object-fit: contain;   
+    background: #000;       
 }
     .hero {
     position: relative;
-    min-height: 80vh;               /* adjust height as needed */
+    min-height: 80vh;              
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1121,18 +1121,18 @@ a:active {
     padding: 4rem 1.5rem;
 }
 
-.hero::before {                     /* optional dark overlay if not already present */
+.hero::before {                     
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);  /* adjust darkness */
+    background: rgba(0, 0, 0, 0.45);  
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 900px;               /* controls how wide the text block is */
+    max-width: 900px;              
     width: 100%;
     margin: 0 auto;
 }
@@ -1172,7 +1172,7 @@ a:active {
     box-shadow: 0 10px 30px rgba(212,175,55,0.5);
 }
 
-/* Mobile adjustments */
+
 @media (max-width: 768px) {
     .hero {
         min-height: 70vh;
