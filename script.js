@@ -1,9 +1,8 @@
-// Kebkab Events – All JavaScript (vanilla only)
-// Loaded on every page – handles nav, form, tabs, gallery, etc.
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // 1. Mobile Hamburger Menu Toggle
+    
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
 
@@ -12,12 +11,12 @@ document.addEventListener('DOMContentLoaded', function () {
             navLinks.classList.toggle('active');
             menuToggle.classList.toggle('active');
 
-            // Update accessibility attribute
+            
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             menuToggle.setAttribute('aria-expanded', !isExpanded);
         });
 
-        // Close menu when clicking any link
+       
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', function () {
                 navLinks.classList.remove('active');
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 2. Contact Form Validation + LocalStorage
+   
     const contactForm = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
 
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            // Success – save to LocalStorage
+            
             const inquiry = {
                 name,
                 email,
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
             contactForm.reset();
         });
 
-        // Show last saved inquiry (optional demo)
+        
         const lastInquiry = localStorage.getItem('lastInquiry');
         if (lastInquiry) {
             const data = JSON.parse(lastInquiry);
@@ -75,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // 3. Events Page – Tab Switching
+  
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
@@ -93,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 4. Gallery Page – Lightbox Modal
+ 
     const galleryItems = document.querySelectorAll('.gallery-item');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -125,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Optional: Card hover lift effect (works on desktop)
+    
     document.querySelectorAll('.value-card, .team-card, .package-card, .stat-card').forEach(card => {
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-8px)';
